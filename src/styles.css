@@ -1,0 +1,23 @@
+/* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .bg-snowfall {
+    background-image: 
+      radial-gradient(circle, white 1px, transparent 1px),
+      radial-gradient(circle, white 1px, transparent 1px);
+    background-size: 24px 24px, 36px 36px;
+    animation: snowfall 4s linear infinite;
+  }
+
+  @keyframes snowfall {
+    from {
+      background-position: 0 0, 0 0;
+    }
+    to {
+      background-position: -24px 24px, -36px 36px;
+    }
+  }
+}
